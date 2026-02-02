@@ -25,6 +25,6 @@ services:
       - 3000:3000
     volumes:
       - ./grafana/custom.ini:/usr/share/grafana/conf/custom.ini:ro
-      - ./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
+      - ./grafana/provisioning:/etc/grafana/provisioning
   k6:
     image: grafana/k6:1.5.0
