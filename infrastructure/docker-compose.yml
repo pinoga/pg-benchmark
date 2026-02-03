@@ -27,3 +27,6 @@ services:
       - grafana-storage:/var/lib/grafana
   k6:
     image: grafana/k6:1.5.0
+
+volumes:
+  grafana-storage: {}
