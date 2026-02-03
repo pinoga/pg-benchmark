@@ -24,5 +24,6 @@ services:
     volumes:
       - ./grafana/custom.ini:/usr/share/grafana/conf/custom.ini:ro
       - ./grafana/provisioning:/etc/grafana/provisioning
+      - grafana-storage:/var/lib/grafana
   k6:
     image: grafana/k6:1.5.0
