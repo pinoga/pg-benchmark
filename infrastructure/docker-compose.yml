@@ -26,9 +26,11 @@ services:
       - ./grafana/provisioning:/etc/grafana/provisioning
       - grafana-storage:/var/lib/grafana
   k6:
-    image: grafana/k6:1.5.0
+    build:
+      context: ./k6
+      dockerfile: Dockerfile
     volumes:
-      - ./k6:/app
+      - ../k6:/app
 
 volumes:
   grafana-storage: {}
